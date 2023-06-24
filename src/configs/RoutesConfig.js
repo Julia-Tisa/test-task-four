@@ -101,9 +101,9 @@ export const protectedRoutes = [
         component: React.lazy(() => import('views/app-views/system/mobileApp')),
     },
     {
-        key: 'system.logs',
-        path: `${APP_PREFIX_PATH}/system/logs`,
-        component: React.lazy(() => import('views/app-views/system/logs')),
+        key: 'system.usersLogs',
+        path: `${APP_PREFIX_PATH}/system/usersLogs`,
+        component: React.lazy(() => import('views/app-views/system/usersLogs')),
     },
     {
         key: 'user',
