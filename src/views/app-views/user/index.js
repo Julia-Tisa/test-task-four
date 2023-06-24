@@ -42,7 +42,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
   };
 
   return (
-    <>
+    <div>
       <div className="mt-4">
         <Form
           name="basicInformation"
@@ -145,7 +145,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
           </Row>
         </Form>
       </div>
-    </>
+    </div>
   );
 };
 

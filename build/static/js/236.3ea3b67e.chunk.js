@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkemilus=self.webpackChunkemilus||[]).push([[236],{95236:function(e,n,u){u.r(n),u.d(n,{MobileApp:function(){return t}});u(72791);var r=u(80184),t=function(){return(0,r.jsx)(r.Fragment,{children:"\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u043e\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435"})};n.default=t}}]);
-//# sourceMappingURL=236.3ea3b67e.chunk.js.map

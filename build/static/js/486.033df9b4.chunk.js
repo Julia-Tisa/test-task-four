@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkemilus=self.webpackChunkemilus||[]).push([[486],{53486:function(e,n,u){u.r(n),u.d(n,{Logs:function(){return s}});u(72791);var r=u(80184),s=function(){return(0,r.jsx)(r.Fragment,{children:"\u041b\u043e\u0433\u0438"})};n.default=s}}]);
-//# sourceMappingURL=486.033df9b4.chunk.js.map

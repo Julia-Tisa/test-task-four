@@ -11,63 +11,55 @@ export const initialState = {
 	token: localStorage.getItem(AUTH_TOKEN) || null
 }
 
-export const signIn = createAsyncThunk('auth/signIn',async (data, { rejectWithValue }) => {
+export const signIn = createAsyncThunk('auth/login',async (data, { rejectWithValue }) => {
 	const { email, password } = data
 	try {
-		const response = await FirebaseService.signInEmailRequest(email, password)
-		if (response.user) {
-			const token = response.user.refreshToken;
-			localStorage.setItem(AUTH_TOKEN, response.user.refreshToken);
-			return token;
-		} else {
-			return rejectWithValue(response.message?.replace('Firebase: ', ''));
-		}
+		const response = await AuthService.login({email, password})
+		const token = response.data.token;
+		localStorage.setItem(AUTH_TOKEN, token);
+		return token;
 	} catch (err) {
-		return rejectWithValue(err.message || 'Error')
+		return rejectWithValue(err.response?.data?.message || 'Error')
 	}
 })
 
-export const signUp = createAsyncThunk('auth/signUp',async (data, { rejectWithValue }) => {
+export const signUp = createAsyncThunk('auth/register',async (data, { rejectWithValue }) => {
 	const { email, password } = data
 	try {
-		const response = await FirebaseService.signUpEmailRequest(email, password)
-		if (response.user) {
-			const token = response.user.refreshToken;
-			localStorage.setItem(AUTH_TOKEN, response.user.refreshToken);
-			return token;
-		} else {
-			return rejectWithValue(response.message?.replace('Firebase: ', ''));
-		}
+		const response = await AuthService.register({email, password})
+		const token = response.data.token;
+		localStorage.setItem(AUTH_TOKEN, token);
+		return token;
 	} catch (err) {
-		return rejectWithValue(err.message || 'Error')
+		return rejectWithValue(err.response?.data?.message || 'Error')
 	}
 })
 
-export const signOut = createAsyncThunk('auth/signOut',async () => {
+export const signOut = createAsyncThunk('auth/logout',async () => {
     const response = await FirebaseService.signOutRequest()
 	localStorage.removeItem(AUTH_TOKEN);
     return response.data
 })
 
 export const signInWithGoogle = createAsyncThunk('auth/signInWithGoogle', async (_, { rejectWithValue }) => {
-    const response = await FirebaseService.signInGoogleRequest()
-	if (response.user) {
-		const token = response.user.refreshToken;
-		localStorage.setItem(AUTH_TOKEN, response.user.refreshToken);
+    try {
+		const response = await AuthService.loginInOAuth()
+		const token = response.data.token;
+		localStorage.setItem(AUTH_TOKEN, token);
 		return token;
-	} else {
-		return rejectWithValue(response.message?.replace('Firebase: ', ''));
+	} catch (err) {
+		return rejectWithValue(err.response?.data?.message || 'Error')
 	}
 })
 
 export const signInWithFacebook = createAsyncThunk('auth/signInWithFacebook', async (_, { rejectWithValue }) => {
-    const response = await FirebaseService.signInFacebookRequest()
-	if (response.user) {
-		const token = response.user.refreshToken;
-		localStorage.setItem(AUTH_TOKEN, response.user.refreshToken);
+    try {
+		const response = await AuthService.loginInOAuth()
+		const token = response.data.token;
+		localStorage.setItem(AUTH_TOKEN, token);
 		return token;
-	} else {
-		return rejectWithValue(response.message?.replace('Firebase: ', ''));
+	} catch (err) {
+		return rejectWithValue(err.response?.data?.message || 'Error')
 	}
 })
 
