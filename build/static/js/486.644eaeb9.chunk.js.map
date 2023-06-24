@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/486.644eaeb9.chunk.js","mappings":"oKAGaA,EAAO,WAElB,OACE,0DAIH,EAGD,W","sources":["views/app-views/system/logs/index.js"],"sourcesContent":["import React from 'react';\r\n\r\n\r\nexport const Logs = () => {\r\n  \r\n  return (\r\n    <>  \r\n      Логи\r\n    </>\r\n  )\r\n}\r\n\r\n\r\nexport default Logs;\r\n"],"names":["Logs"],"sourceRoot":""}
