@@ -2,14 +2,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { TEMPLATE } from 'constants/ThemeConstant';
-import { MenuFoldOutlined, MenuUnfoldOutlined, SearchOutlined } from '@ant-design/icons';
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import Logo from '../Logo';
-import NavNotification from '../NavNotification';
 import NavProfile from '../NavProfile';
-import NavLanguage from '../NavLanguage';
-import NavPanel from '../NavPanel';
-import NavSearch  from '../NavSearch';
-import SearchInput from '../NavSearch/SearchInput';
 import Header from './Header';
 import HeaderWrapper from './HeaderWrapper';
 import Nav from './Nav'
@@ -32,13 +27,9 @@ export const HeaderNav = props => {
 	const navType = useSelector(state => state.theme.navType)
 	const headerNavColor = useSelector(state => state.theme.headerNavColor)
 	const currentTheme = useSelector(state => state.theme.currentTheme)
-	const direction = useSelector(state => state.theme.direction)
-
-	const onSearchActive = () => {
-		setSearchActive(true)
-	}
 
 	const onSearchClose = () => {
+		console.log(searchActive);
 		setSearchActive(false)
 	}
 
