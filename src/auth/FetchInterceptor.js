@@ -27,7 +27,7 @@ service.interceptors.request.use(config => {
 }, error => {
 	// Do something with request error here
 	notification.error({
-		message: 'Ошибка'
+		message: 'Error'
 	})
 	Promise.reject(error)
 })
@@ -40,26 +40,25 @@ service.interceptors.response.use( (response) => {
 	let notificationParam = {
 		message: ''
 	}
-
+ 
 	// Remove token and redirect 
 	if (unauthorizedCode.includes(error.response.status)) {
-		notificationParam.message = 'Авторизация не пройдена'
-		notificationParam.description = 'Пожалуйста, попробуйте снова'
+		notificationParam.message = 'Authentication Fail'
+		notificationParam.description = 'Please login again'
 		localStorage.removeItem(AUTH_TOKEN)
-
 		store.dispatch(signOutSuccess())
 	}
 
 	if (error.response.status === 404) {
-		notificationParam.message = 'Пользователь не найден'
+		notificationParam.message = 'Not Found'
 	}
 
 	if (error.response.status === 500) {
-		notificationParam.message = 'Ошибка сервера'
+		notificationParam.message = 'Internal Server Error'
 	}
 	
 	if (error.response.status === 508) {
-		notificationParam.message = 'Время вышло'
+		notificationParam.message = 'Time Out'
 	}
 
 	notification.error(notificationParam)

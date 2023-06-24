@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { CheckOutlined, GlobalOutlined, DownOutlined  } from '@ant-design/icons';
-import { Dropdown } from 'antd';
+import { Menu, Dropdown } from 'antd';
 import NavItem from './NavItem'
 import lang from 'assets/data/language.data.json';
 import { useSelector, useDispatch } from 'react-redux';

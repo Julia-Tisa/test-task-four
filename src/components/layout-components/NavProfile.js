@@ -1,7 +1,13 @@
 import React from 'react';
 import { Dropdown, Avatar } from 'antd';
 import { useDispatch } from 'react-redux'
-import { LogoutOutlined } from '@ant-design/icons';
+import { 
+	EditOutlined, 
+	SettingOutlined, 
+	ShopOutlined, 
+	QuestionCircleOutlined, 
+	LogoutOutlined 
+} from '@ant-design/icons';
 import NavItem from './NavItem';
 import Flex from 'components/shared-components/Flex';
 import { signOut } from 'store/slices/authSlice';

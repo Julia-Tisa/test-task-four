@@ -191,7 +191,7 @@ const systemsBoardNavTree = [{
     },
     {
       key: 'system-logs',
-      path: `${APP_PREFIX_PATH}/system/userLogs`,
+      path: `${APP_PREFIX_PATH}/system/logs`,
       title: 'sidenav.dashboard.logs',
       icon: FileTextOutlined,
       breadcrumb: false,
