@@ -34,8 +34,9 @@ function Board() {
 
   const handlePositionImage = (item) => {
     const { x, y } = position[1];
+    console.log(x, Math.round(posContainer.x));
     const newX = x - Math.round(posContainer.x) - 40 <= 0
-      ? -30
+      ? -5
       : x - Math.round(posContainer.x) - 40;
     const newY = y - Math.round(posContainer.y) - 40 <= 0
       ? 0
