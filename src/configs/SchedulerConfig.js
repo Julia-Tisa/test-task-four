@@ -10,6 +10,10 @@ import Deer from '../assets/images/deer.svg';
 import Fox from '../assets/images/fox.svg';
 import Racoon from '../assets/images/racoon.svg';
 import Sheep from '../assets/images/sheep.svg';
+import Enclosure from '../assets/images/enclosure.svg';
+import Dot from '../assets/images/dot.svg';
+import Bush from '../assets/images/bush.svg';
+import Tree from '../assets/images/tree.svg';
 
 export const CONTAINER_SIDEBAR_STYLE = { height: 'calc(100vh - 302px)', overflow: 'auto', textAlign: 'center' };
 
@@ -95,10 +99,29 @@ export default [
     name: 'Енот',
     img: Racoon,
   },
-
   {
     id: 12,
     name: 'Овца',
     img: Sheep,
+  },
+  {
+    id: 13,
+    name: 'Дерево',
+    img: Tree,
+  },
+  {
+    id: 14,
+    name: 'Дерево пониже',
+    img: Bush,
+  },
+  {
+    id: 15,
+    name: 'Загон',
+    img: Enclosure,
+  },
+  {
+    id: 16,
+    name: 'Точка дороги',
+    img: Dot,
   },
 ];

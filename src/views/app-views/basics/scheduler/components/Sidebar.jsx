@@ -10,7 +10,7 @@ function Sidebar() {
     <Card>
       <div style={CONTAINER_SIDEBAR_STYLE}>
         <h2>
-          Животные
+          Элементы
         </h2>
         <ul
           style={UL_SIDEBAR_STYLE}

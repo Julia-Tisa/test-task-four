@@ -1,5 +1,5 @@
-/* eslint-disable no-shadow */
 /* eslint-disable consistent-return */
+/* eslint-disable no-shadow */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { LockOutlined, MailOutlined } from '@ant-design/icons';

@@ -67,7 +67,7 @@ function Board() {
           <Row align="middle">
             <Col>
               <Title level={2} style={{ marginBottom: '10px', textAlign: 'center' }}>
-                Соберите ваш зоопарк
+                Соберите ваш мир
               </Title>
             </Col>
           </Row>
