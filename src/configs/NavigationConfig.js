@@ -1,7 +1,8 @@
-import { 
+import {
   DashboardOutlined,
   FileTextOutlined,
   GiftOutlined,
+  LayoutOutlined,
   MobileOutlined,
   MailOutlined,
   PictureOutlined,
@@ -9,11 +10,10 @@ import {
   ShopOutlined,
   ShoppingCartOutlined,
   ShoppingOutlined,
-  TeamOutlined, 
-  UserOutlined
+  TeamOutlined,
+  UserOutlined,
 } from '@ant-design/icons';
-import { APP_PREFIX_PATH } from 'configs/AppConfig'
-
+import { APP_PREFIX_PATH } from './AppConfig';
 
 const basicBoardNavTree = [{
   key: 'basics',
@@ -29,8 +29,8 @@ const basicBoardNavTree = [{
       title: 'sidenav.basics.dashboard',
       icon: DashboardOutlined,
       breadcrumb: false,
-      submenu: []
-    }, 
+      submenu: [],
+    },
     {
       key: 'basics-catalog',
       path: `${APP_PREFIX_PATH}/basics/catalog`,
@@ -44,7 +44,7 @@ const basicBoardNavTree = [{
           title: 'sidenav.basics.catalog.products',
           icon: '',
           breadcrumb: false,
-          submenu: []
+          submenu: [],
         },
         {
           key: 'basics-catalog-categories',
@@ -52,7 +52,7 @@ const basicBoardNavTree = [{
           title: 'sidenav.basics.catalog.categories',
           icon: '',
           breadcrumb: false,
-          submenu: []
+          submenu: [],
         },
         {
           key: 'basics-catalog-collections',
@@ -60,7 +60,7 @@ const basicBoardNavTree = [{
           title: 'sidenav.basics.catalog.collections',
           icon: '',
           breadcrumb: false,
-          submenu: []
+          submenu: [],
         },
         {
           key: 'basics-catalog-combo',
@@ -68,9 +68,9 @@ const basicBoardNavTree = [{
           title: 'sidenav.basics.catalog.combo',
           icon: '',
           breadcrumb: false,
-          submenu: []
+          submenu: [],
         },
-      ]
+      ],
     },
     {
       key: 'basics-orders',
@@ -78,7 +78,7 @@ const basicBoardNavTree = [{
       title: 'sidenav.basics.orders',
       icon: ShoppingOutlined,
       breadcrumb: false,
-      submenu: []
+      submenu: [],
     },
     {
       key: 'basics-clients',
@@ -93,7 +93,7 @@ const basicBoardNavTree = [{
           title: 'sidenav.basics.clients.list',
           icon: '',
           breadcrumb: false,
-          submenu: []
+          submenu: [],
         },
         {
           key: 'basics-clients-groups',
@@ -101,17 +101,25 @@ const basicBoardNavTree = [{
           title: 'sidenav.basics.clients.groups',
           icon: '',
           breadcrumb: false,
-          submenu: []
-        }
-      ]
-    }, 
+          submenu: [],
+        },
+      ],
+    },
     {
       key: 'basics-banners',
       path: `${APP_PREFIX_PATH}/basics/banners`,
       title: 'sidenav.basics.banners',
       icon: PictureOutlined,
       breadcrumb: false,
-      submenu: []
+      submenu: [],
+    },
+    {
+      key: 'basics-scheduler',
+      path: `${APP_PREFIX_PATH}/basics/scheduler`,
+      title: 'sidenav.basics.scheduler',
+      icon: LayoutOutlined,
+      breadcrumb: false,
+      submenu: [],
     },
     {
       key: 'basics-promocodes',
@@ -119,7 +127,7 @@ const basicBoardNavTree = [{
       title: 'sidenav.basics.promocodes',
       icon: GiftOutlined,
       breadcrumb: false,
-      submenu: []
+      submenu: [],
     },
     {
       key: 'basics-offlineDots',
@@ -134,7 +142,7 @@ const basicBoardNavTree = [{
           title: 'sidenav.basics.offlineDots.addresses',
           icon: '',
           breadcrumb: false,
-          submenu: []
+          submenu: [],
         },
         {
           key: 'basics-offlineDots-geofences',
@@ -142,17 +150,17 @@ const basicBoardNavTree = [{
           title: 'sidenav.basics.offlineDots.geofences',
           icon: '',
           breadcrumb: false,
-          submenu: []
-        }
-      ]
-    }, 
+          submenu: [],
+        },
+      ],
+    },
     {
       key: 'basics-staff',
       path: `${APP_PREFIX_PATH}/basics/staff`,
       title: 'sidenav.basics.staff',
       icon: TeamOutlined,
       breadcrumb: false,
-      submenu: []
+      submenu: [],
     },
     {
       key: 'basics-mailing',
@@ -160,10 +168,10 @@ const basicBoardNavTree = [{
       title: 'sidenav.basics.mailing',
       icon: MailOutlined,
       breadcrumb: false,
-      submenu: []
-    }
-  ]
-}]
+      submenu: [],
+    },
+  ],
+}];
 
 const systemsBoardNavTree = [{
   key: 'system',
@@ -179,15 +187,15 @@ const systemsBoardNavTree = [{
       title: 'sidenav.dashboard.settings',
       icon: SettingOutlined,
       breadcrumb: false,
-      submenu: []
-    }, 
+      submenu: [],
+    },
     {
       key: 'system-mobileApp',
       path: `${APP_PREFIX_PATH}/system/mobileApp`,
       title: 'sidenav.dashboard.mobileApp',
       icon: MobileOutlined,
       breadcrumb: false,
-      submenu: []
+      submenu: [],
     },
     {
       key: 'system-logs',
@@ -195,14 +203,14 @@ const systemsBoardNavTree = [{
       title: 'sidenav.dashboard.logs',
       icon: FileTextOutlined,
       breadcrumb: false,
-      submenu: []
-    }
-  ]
-}]
+      submenu: [],
+    },
+  ],
+}];
 
 const navigationConfig = [
   ...basicBoardNavTree,
   ...systemsBoardNavTree,
-]
+];
 
 export default navigationConfig;

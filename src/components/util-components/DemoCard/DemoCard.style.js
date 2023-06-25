@@ -1,28 +1,28 @@
 import { css } from '@emotion/react';
 
-export const codeBoxCss = token => css`
-	position: relative;
-	display: inline-block;
-	width: 100%;
-	margin: 0 0 16px;
-	border: 1px solid ${token.colorBorderSecondary};
-	border-radius: ${token.borderRadiusLG}px;
-	background-color: ${token.colorBgContainer};
+export const codeBoxCss = (token) => css`
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 16px;
+  border: 1px solid ${token.colorBorderSecondary};
+  border-radius: ${token.borderRadiusLG}px;
+  background-color: ${token.colorBgContainer};
 
     .code-box-title {
         font-size:  ${token.fontSizeHeading4}px;
     }
-`
-export const codeBoxDemoCss = token => css`
-	padding: 42px 24px 50px;
-	border-bottom: 1px solid ${token.colorBorderSecondary}px;
+`;
+export const codeBoxDemoCss = (token) => css`
+  padding: 42px 24px 50px;
+  border-bottom: 1px solid ${token.colorBorderSecondary}px;
 
-	iframe {
-		border: 0px;
-		width: 100%;
-	}
+  iframe {
+    border: 0px;
+    width: 100%;
+  }
 
-	.config-provider {
+    .config-provider {
         .site-config-provider-calendar-wrapper {
             width: 319px;
             border: 1px solid ${token.colorBorderSecondary};
@@ -74,11 +74,11 @@ export const codeBoxDemoCss = token => css`
             margin-left: 20px;
         }
     }
-`
+`;
 
 export const codeBoxDescriptionCss = css`
     padding: 16px;
-`
+`;
 
 export const codeBoxHighlightCss = (token, codeExpand) => css`
     margin-top: 16px;
@@ -97,12 +97,12 @@ export const codeBoxHighlightCss = (token, codeExpand) => css`
     pre {
         margin-bottom: 0px;
     }
-`
+`;
 
 export const codeBoxIconCss = (token, copied) => css`
     cursor: pointer;
-    ${copied ? ('color:' + token.colorSuccess + ';') : ''}
-`
+    ${copied ? (`color:${token.colorSuccess};`) : ''}
+`;
 
 export const codeBoxActionCss = (token) => css`
     margin-top: 12px;
@@ -114,4 +114,4 @@ export const codeBoxActionCss = (token) => css`
     align-items: center;
     justify-content: end;
     gap: 10px;
-`
+`;

@@ -1,1 +1,2 @@
-export const AUTH_TOKEN = 'auth_token'
+/* eslint-disable import/prefer-default-export */
+export const AUTH_TOKEN = 'auth_token';
